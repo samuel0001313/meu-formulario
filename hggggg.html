@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .es{
+        margin-top: 5px;
+    }
+    .a{
+        margin-bottom: 5px;
+    }
+    .q{
+        font-style: italic;
+        margin-top: 25px;
+    }
+    form{
+        text-align: center;
+        
+    }
+    .section-one{
+        background: rgb(153, 149, 149);
+        width: 200px;
+        height: 230px;
+        border: 2px solid black;
+        margin-left: 400px;
+        margin-top: 107px;
+        cursor: pointer;
+    
+    
+    }
+    input:hover{
+        background-color: aqua;
+
+    }
+    
+
+</style>
+</head>
+<body>
+    <section class="section-one">
+        <form action="#" target="_blank" id="form">
+            <p class="q">LOGIN</p>
+            
+             <label for="nome"></label>
+            <input type="text" class="es" placeholder="ex.email@gmail.com" required name="email"><br><br>
+            <label for="senha"></label>
+            <input type="password" class="a" placeholder="Senha"required name="senha">
+            <a href="http://#" class="senha">Esqueci minha senha</a>
+            
+
+            <p>
+                <button type="reset">Reset</button>
+                <button type="submit">Entrar</button>
+            </p>
+         </form>
+
+    </section>
+    <script>
+        const form = document.getElementById('form');
+        
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+    
+            const email = document.querySelector('.es');
+            console.log(email.value);
+
+            const senha = document.querySelector('.a');
+            console.log(senha.value);
+        })
+    
+        console.log(form);
+    </script>
+</body>
+</html>
